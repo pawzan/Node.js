@@ -20,4 +20,6 @@ app.use(cors());
 const users = require("./routes/users");
 app.use("/users", users);
 
-app.listen(8080, () => console.log("Listening !"));
+const port = process.env.PORT || 8080;
+
+app.listen(port, () => console.log("Listening !"));
